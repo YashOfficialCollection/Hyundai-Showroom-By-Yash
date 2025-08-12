@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yash — Learning Portfolio</title>
+  <meta name="description" content="Professional learning portfolio with animations, courses, projects, blog, and contact.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Glassmorphism Navbar -->
+  <header class="site-header glass">
+    <div class="brand">Yash<span class="dot">.</span></div>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li class="has-dropdown">
+          <button class="drop-btn">Courses ▾</button>
+          <ul class="dropdown">
+            <li><a href="#" data-filter="all">All</a></li>
+            <li><a href="#" data-filter="web">Web Development</a></li>
+            <li><a href="#" data-filter="design">Design</a></li>
+            <li><a href="#" data-filter="business">Business</a></li>
+          </ul>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="tools">
+      <!-- Profile Menu -->
+      <div class="profile">
+        <button id="profileBtn">Y</button>
+        <ul id="profileMenu" class="profile-menu">
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#logout">Logout</a></li>
+        </ul>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button id="menuToggle" class="hamburger">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Particles Background -->
+    <section id="home" class="hero animate">
+      <div class="hero-bg" id="particles-js"></div>
+      <div class="hero-inner">
+        <h1><span id="typed"></span></h1>
+        <p>Professional courses, hands-on projects and resources to boost your career.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#web">Start Learning</a>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="web" class="section animate">
+      <div class="section-head">
+        <h2>Courses</h2>
+      </div>
+      <div class="grid" id="courses">
+        <article class="card" data-category="web">
+          <h3>HTML & CSS Fundamentals</h3>
+          <p>Learn structure, layout and responsive design.</p>
+        </article>
+        <article class="card" data-category="web">
+          <h3>JavaScript & Interactivity</h3>
+          <p>DOM, events, API calls and modern JS tooling.</p>
+        </article>
+        <article class="card" data-category="design">
+          <h3>UI/UX Design Basics</h3>
+          <p>Principles of design and prototyping tools.</p>
+        </article>
+        <article class="card" data-category="business">
+          <h3>Digital Marketing Essentials</h3>
+          <p>SEO, social media, and campaign strategies.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section alt animate">
+      <div class="section-head">
+        <h2>My Projects</h2>
+        <p>Some of my best works and case studies.</p>
+      </div>
+      <div class="grid">
+        <div class="project-card">
+          <img src="project1.jpg" alt="Project 1">
+          <h3>Portfolio Website</h3>
+        </div>
+        <div class="project-card">
+          <img src="project2.jpg" alt="Project 2">
+          <h3>E-Commerce App</h3>
+        </div>
+        <div class="project-card">
+          <img src="project3.jpg" alt="Project 3">
+          <h3>Blog Platform</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section with Counters -->
+    <section id="about" class="section animate">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p>Short intro about your learning journey and expertise.</p>
+        <a class="btn" href="resume.pdf" download>Download Resume</a>
+      </div>
+      <div class="counters">
+        <div class="counter-box">
+          <span class="counter" data-target="120">0</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="counter-box">
+          <span class="counter" data-target="500">0</span>
+          <p>Students Trained</p>
+        </div>
+        <div class="counter-box">
+          <span class="counter" data-target="15">0</span>
+          <p>Courses Offered</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section alt animate">
+      <div class="section-head">
+        <h2>What Students Say</h2>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p>"Yash's teaching style is engaging and easy to follow!"</p>
+          <span>⭐⭐⭐⭐⭐</span>
+          <h4>- Priya Sharma</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"Helped me land my first job in web development."</p>
+          <span>⭐⭐⭐⭐⭐</span>
+          <h4>- Rohit Verma</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section animate">
+      <div class="section-head">
+        <h2>Latest Articles</h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="blog1.jpg" alt="Blog 1">
+          <h3>How to Start with Web Development</h3>
+          <a href="#">Read More →</a>
+        </div>
+        <div class="blog-card">
+          <img src="blog2.jpg" alt="Blog 2">
+          <h3>Top 10 UI/UX Design Tips</h3>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="section alt animate">
+  <div class="section-head">
+    <h2>Contact Me</h2>
+  </div>
+  <form id="contactForm" class="contact-form">
+    <input id="name" name="name" placeholder="Your Name" required>
+    <input id="email" name="email" type="email" placeholder="Your Email" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="section animate">
+  <div class="section-head">
+    <h2>Stay Updated</h2>
+    <p>Get the latest courses, tips, and resources directly in your inbox.</p>
+  </div>
+  <form id="newsletterForm" class="newsletter-form">
+    <input type="email" name="newsletterEmail" placeholder="Enter your email" required>
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section alt animate">
+  <div class="section-head">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">How can I enroll in a course? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Simply click on the course you’re interested in and follow the enrollment instructions.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer certificates? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Yes, certificates are provided upon successful completion of each course.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I contact you for personal mentoring? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Absolutely! Use the contact form above to reach out for one-on-one sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Extra Footer Links -->
+<section id="extra-links" class="section small-section">
+  <div class="footer-links">
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow Me</h4>
+      <ul class="social-icons">
+        <li><a href="#"><img src="icons/facebook.svg" alt="Facebook"></a></li>
+        <li><a href="#"><img src="icons/twitter.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="icons/github.svg" alt="GitHub"></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Yash — All rights reserved</div>
+    <button id="backToTop">↑</button>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</body>
+</html>
